@@ -8,12 +8,11 @@ export const GetTokens = () => {
         if (typeof window.ethereum === "undefined") {
             throw("Metamask is not installed");
         }
-        const account = (await window.ethereum.request({method: 'eth_requestAccounts'}))[0];
+        const account = await window.ethereum.request({ method: 'eth_requestAccounts' });
         const provider = new ethers.providers.Web3Provider(window.ethereum);
         const signer = provider.getSigner();
         const contract = new ethers.Contract(CONTRACT_ADDRESS, ExampleToken.abi, signer);
-        await contract.faucet(account, 100)
-
+        await contract.faucet(account[0], 1000)
     }
 
 

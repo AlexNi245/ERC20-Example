@@ -1,6 +1,5 @@
 
 import ExampleToken from './artifacts/contracts/ExampleToken.sol/ExampleToken.json'
-import {Faucet} from "./components/Faucet.jsx"
 import {SendToken} from "./components/SendToken";
 import {Header} from "./components/Header";
 

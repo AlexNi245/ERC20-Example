@@ -1,12 +1,12 @@
 import React, {useState} from "react";
 import {ethers} from "ethers";
+import {CONTRACT_ADDRESS} from "../constants";
 
-const CONTRACT_ADDRESS = "0x5fbdb2315678afecb367f032d93f642f64180aa3";
 
 export const SendToken = ({abi}) => {
 
     const [destination, setDestination] = useState("");
-    const [amount, setAmount] = useState(0);
+    const [amount, setAmount] = useState("");
 
     const sendCoins = async () => {
         if (typeof window.ethereum === "undefined") {
@@ -26,9 +26,7 @@ export const SendToken = ({abi}) => {
             <div className="flex justify-between bg-gray-200 rounded-2xl  mx-2 px-2 py-4 ">
                 <input
                     className="bg-gray-200 focus:outline-none text-right w-full block "
-                    type="number"
                     value={amount}
-                    min="0"
                     onChange={e => setAmount(e.target.value)}/>
             </div>
             <div className="flex justify-between bg-gray-200 rounded-2xl  mx-2 px-2 py-4 mt-2">
