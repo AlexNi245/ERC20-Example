@@ -17,7 +17,7 @@ async function main() {
 
     const ExampleToken = await hre.ethers.getContractFactory("ExampleToken");
 
-    const exampleToken = await ExampleToken.deploy("Example Token","EXA");
+    const exampleToken = await ExampleToken.deploy("Example Token","EXP");
 
     await exampleToken.deployed();
 

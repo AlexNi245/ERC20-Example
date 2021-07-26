@@ -41,7 +41,7 @@ export const Header = () => {
 
 
     return <div className="flex justify-between px-8 pt-4  ">
-        <p className="text-2xl ">EXP Balance : {balance}</p>
+        <p className="text-2xl font-mono text-green-500">{balance}$</p>
         <GetTokens/>
     </div>
 }
