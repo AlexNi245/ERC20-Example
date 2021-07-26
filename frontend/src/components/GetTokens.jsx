@@ -12,7 +12,8 @@ export const GetTokens = () => {
         const signer = provider.getSigner();
         const contract = new ethers.Contract(CONTRACT_ADDRESS, ExampleToken.abi, signer);
         await contract.faucet(account, 1000)
-
+        //await transactionWasMined()
+       //Do something after the transaction was mined ...
     }
 
 
