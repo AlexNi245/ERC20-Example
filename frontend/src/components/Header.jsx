@@ -13,7 +13,7 @@ export const Header = () => {
     }, [])
     const getBalance = async () => {
         if (typeof window.ethereum === "undefined") {
-            throw("Metamask is not installed");
+            throw Error("Metamask is not installed");
         }
 
         const [account] = await window.ethereum.request({method: "eth_requestAccounts"})
@@ -27,7 +27,7 @@ export const Header = () => {
 
     const addAfterMintEventListener = () => {
         if (typeof window.ethereum === "undefined") {
-            throw("Metamask is not installed");
+            throw Error("Metamask is not installed");
         }
         const provider = new ethers.providers.Web3Provider(window.ethereum);
         const contract = new ethers.Contract(CONTRACT_ADDRESS, ExampleToken.abi, provider);

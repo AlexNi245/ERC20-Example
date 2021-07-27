@@ -1,11 +1,11 @@
-import React, {useState} from "react";
+import React from "react";
 import {ethers} from "ethers";
 import {CONTRACT_ADDRESS, ExampleToken} from "../constants";
 
 export const GetTokens = () => {
     const getTokens = async () => {
         if (typeof window.ethereum === "undefined") {
-            throw("Metamask is not installed");
+            throw Error("Metamask is not installed");
         }
         const [account] = await window.ethereum.request({method: 'eth_requestAccounts'});
         const provider = new ethers.providers.Web3Provider(window.ethereum);
