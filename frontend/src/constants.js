@@ -2,4 +2,4 @@ import _ExampleToken from './artifacts/contracts/ExampleToken.sol/ExampleToken.j
 
 
 export const ExampleToken = _ExampleToken;
-export const CONTRACT_ADDRESS = "0x4C4a2f8c81640e47606d3fd77B353E87Ba015584";
+export const CONTRACT_ADDRESS = "0xeEF8A34c47d86d001156430B3339d00FE13b1CCC";
